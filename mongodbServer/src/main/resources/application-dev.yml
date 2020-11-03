@@ -1,0 +1,62 @@
+spring:
+  data:
+    mongodb:
+      secondary:
+        database: YSPOS_BOSS
+        host: 10.213.32.84
+        password: 2wsxCDE#
+        port: 50000
+        username: interface_manager
+        authentication-database: admin
+      primary:
+        database: CUST
+        host: 10.213.32.84
+        password: 2wsxCDE#
+        port: 50000
+        username: interface_manager
+        authentication-database: admin
+      selttle:
+        database: YSPOS_SETTLE
+        host: 10.213.32.84
+        password: 2wsxCDE#
+        port: 50000
+        username: interface_manager
+        authentication-database: admin
+      account:
+        database: ACCOUNT
+        host: 10.213.32.84
+        password: 2wsxCDE#
+        port: 50000
+        username: interface_manager
+        authentication-database: admin
+      cust:
+        database: YSPAY_CUST
+        host: 10.213.32.84
+        password: 2wsxCDE#
+        port: 50000
+        username: interface_manager
+        authentication-database: admin
+      yspayaccount:
+        database: YSPAY_ACCOUNT
+        host: 10.213.32.84
+        password: 2wsxCDE#
+        port: 50000
+        username: interface_manager
+        authentication-database: admin
+      yspostrade:
+        database: YSPOS_TRADE
+        host: 10.213.32.84
+        password: 2wsxCDE#
+        port: 50000
+        username: interface_manager
+        authentication-database: admin
+      yspaytrade:
+        database: YSPAY_TRADE
+        host: 10.213.32.84
+        password: 2wsxCDE#
+        port: 50000
+        username: interface_manager
+        authentication-database: admin
+errPath: D:\logs\merchant\ssdd
+merchantHessianUrl: http://10.213.30.18:8080/operation/adapterQuery
+

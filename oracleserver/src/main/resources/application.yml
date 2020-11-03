@@ -1,0 +1,32 @@
+server:
+  port: 8771
+
+spring:
+  application:
+    name: WhyTestService
+  datasource:
+    url: jdbc:oracle:thin:@10.213.40.93:1521:XE
+    username: ANTIFRAUD
+    password: 4093anTI!!##fra
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.mysqlserver.mapper.WhyTestMapper">
+	<!-- 结果Map -->
+	<resultMap id="BaseResultMap" type="com.example.mysqlserver.entity.Whytest">
+		<result property="id" jdbcType="VARCHAR" column="ID"/>
+		<result property="name" jdbcType="VARCHAR" column="NAME"/>
+	</resultMap>
+
+	<!-- 查询列 -->
+	<sql id="BaseColumnList">
+		ID,NAME
+	</sql>
+
+	<!--创建记录 -->
+	<insert id="create" parameterType="com.example.mysqlserver.entity.Whytest">
+		INSERT INTO WHYTEST
+		<trim prefix="(" suffix=")" suffixOverrides="," >
+			<if test="id!=null">ID,</if>
+			<if test="name!=null and name!=''">NAME</if>
+		</trim>
+		<trim prefix="VALUES (" suffix=")" suffixOverrides="," >
+			<if test="id!=null">#{id,jdbcType=DECIMAL},</if>
+			<if test="name!=null and name!=''">#{name,jdbcType=VARCHAR}</if>
+		</trim>
+	</insert>
+
+	<!-- 更新记录 -->
+
+	<!-- 按对象查询 -->
+	<select id="queryByWhytest" resultMap="BaseResultMap">
+		SELECT <include refid="BaseColumnList" />
+		FROM WHYTEST
+	</select>
+
+	<sql id="pageHead">
+	   SELECT * FROM (
+	       SELECT ROWNUM AS RN, TM.* FROM (
+	   
+	</sql>
+	<sql id="pageTail">
+		) TM ) TMP
+		<where>
+			TMP.RN &gt; (${pageNum}-1)*${pageSize}
+			AND TMP.RN &lt;= ${pageNum}*${pageSize}
+		</where>
+	</sql>
+	<sql id="pageBody">
+		SELECT <include refid="BaseColumnList"/>
+		FROM WHYTEST
+		<where>
+			<if test="id!=null">AND ID = #{id,jdbcType=DECIMAL}</if>
+			<if test="name!=null and name!=''">AND NAME = #{name,jdbcType=VARCHAR}</if>
+		</where>
+	</sql>
+
+	<!-- 根据条件分页 -->
+	<select id="queryByPage" parameterType="java.util.Map" resultMap="BaseResultMap">
+		<include refid="pageHead"/>
+		<include refid="pageBody"/>
+		<include refid="pageTail"/>
+	</select>
+
+	<!-- 根据条件查询总数 -->
+	<select id="countByCondtion" parameterType="java.util.Map" resultType="long">
+		SELECT COUNT(*) FROM WHYTEST
+		<where>
+			1=1
+			<if test="id!=null">AND ID = #{id,jdbcType=DECIMAL}</if>
+			<if test="name!=null and name!=''">AND NAME = #{name,jdbcType=VARCHAR}</if>
+		</where>
+	</select>
+</mapper>
+

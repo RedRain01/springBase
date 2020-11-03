@@ -1,0 +1,120 @@
+2020-01-09 10:31:40 o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@445b295b: startup date [Thu Jan 09 10:31:40 CST 2020]; root of context hierarchy
+2020-01-09 10:31:40 o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-01-09 10:31:40 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$58c1b31f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 10:31:42 c.e.d.MongodbServerApplication - The following profiles are active: dev
+2020-01-09 10:31:42 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@517566b: startup date [Thu Jan 09 10:31:42 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@445b295b
+2020-01-09 10:31:43 o.s.c.c.scope.GenericScope - BeanFactory id=c50ddef2-460c-3fc6-9bcd-9af2ff4b400d
+2020-01-09 10:31:43 o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-01-09 10:31:43 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$58c1b31f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 10:31:44 o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2020-01-09 10:31:44 o.a.c.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2020-01-09 10:31:44 o.a.c.core.StandardService - Starting service [Tomcat]
+2020-01-09 10:31:44 o.a.c.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-01-09 10:31:44 o.a.c.c.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\software\develop\Java\jdk1.8.0_171\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\software\develop\app\wanghy\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;"D:\software\develop\Java\jdk1.8.0_171\bin;D:\software\develop\Java\jdk1.8.0_171\jre\bin";E:\developData\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\Program Files\TortoiseGit\bin;D:\software\develop\nodejs\;D:\software\develop\mysql5.6\mysql-5.6.43-winx64\mysql-5.6.43-winx64\bin;D:\software\develop\curl\src;D:\software\develop\svn\bin;D:\software\develop\Git2.2\cmd;C:\Users\wanghy\AppData\Local\Microsoft\WindowsApps;D:\software\develop\Microsoft VS Code\bin;C:\Users\wanghy\AppData\Roaming\npm;C:\Users\wanghy\AppData\Local\BypassRuntm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;.]
+2020-01-09 10:31:44 o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-09 10:31:44 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1720 ms
+2020-01-09 10:31:44 c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-01-09 10:31:44 c.n.c.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@697931b6
+2020-01-09 10:31:46 org.mongodb.driver.cluster - Cluster created with settings {hosts=[10.213.32.84:50000], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-01-09 10:31:46 org.mongodb.driver.cluster - Cluster created with settings {hosts=[10.213.32.84:50000], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-01-09 10:31:46 org.mongodb.driver.connection - Opened connection [connectionId{localValue:1}] to 10.213.32.84:50000
+2020-01-09 10:31:46 org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=10.213.32.84:50000, type=SHARD_ROUTER, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 12]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3335000}
+2020-01-09 10:31:46 org.mongodb.driver.connection - Opened connection [connectionId{localValue:2}] to 10.213.32.84:50000
+2020-01-09 10:31:46 org.mongodb.driver.cluster - Cluster created with settings {hosts=[10.213.32.84:50000], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-01-09 10:31:46 org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=10.213.32.84:50000, type=SHARD_ROUTER, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 12]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2271900}
+2020-01-09 10:31:46 org.mongodb.driver.cluster - Cluster created with settings {hosts=[10.213.32.84:50000], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-01-09 10:31:46 org.mongodb.driver.connection - Opened connection [connectionId{localValue:4}] to 10.213.32.84:50000
+2020-01-09 10:31:46 org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=10.213.32.84:50000, type=SHARD_ROUTER, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 12]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1935000}
+2020-01-09 10:31:46 org.mongodb.driver.connection - Opened connection [connectionId{localValue:3}] to 10.213.32.84:50000
+2020-01-09 10:31:46 org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=10.213.32.84:50000, type=SHARD_ROUTER, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 12]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1048000}
+2020-01-09 10:31:48 o.s.c.commons.util.InetUtils - Cannot determine local hostname
+2020-01-09 10:31:50 o.s.c.commons.util.InetUtils - Cannot determine local hostname
+2020-01-09 10:31:51 o.s.b.w.s.ServletRegistrationBean - Servlet proxyStreamServlet mapped to [/proxy.stream]
+2020-01-09 10:31:51 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2020-01-09 10:31:51 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-09 10:31:51 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-01-09 10:31:51 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-01-09 10:31:51 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2020-01-09 10:31:51 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpTraceFilter' to: [/*]
+2020-01-09 10:31:51 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2020-01-09 10:31:51 o.s.u.f.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@517566b: startup date [Thu Jan 09 10:31:42 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@445b295b] and template loader path [classpath:/templates/]
+2020-01-09 10:31:51 o.s.w.s.v.f.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2020-01-09 10:31:51 c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-01-09 10:31:51 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 10:31:51 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@517566b: startup date [Thu Jan 09 10:31:42 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@445b295b
+2020-01-09 10:31:51 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/aa],methods=[GET]}" onto public java.lang.String com.example.demo.com.example.mysqlservers.controller.Test.aa()
+2020-01-09 10:31:51 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/cc],methods=[GET]}" onto public java.lang.String com.example.demo.com.example.mysqlservers.controller.Test.list14()
+2020-01-09 10:31:51 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/mong]}" onto public java.lang.String com.example.demo.serviceImpl.MongoServerImpl.test(java.lang.String)
+2020-01-09 10:31:51 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/mongo]}" onto public java.lang.String com.example.demo.serviceImpl.MongoServerImpl.aa()
+2020-01-09 10:31:51 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hystrix/{path}]}" onto public java.lang.String org.springframework.cloud.netflix.hystrix.dashboard.HystrixDashboardController.monitor(java.lang.String,org.springframework.ui.Model,org.springframework.web.context.request.WebRequest)
+2020-01-09 10:31:51 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hystrix]}" onto public java.lang.String org.springframework.cloud.netflix.hystrix.dashboard.HystrixDashboardController.home(org.springframework.ui.Model,org.springframework.web.context.request.WebRequest)
+2020-01-09 10:31:51 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-01-09 10:31:51 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-09 10:31:51 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 10:31:51 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-01-09 10:31:52 o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-09 10:31:52 o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2020-01-09 10:31:52 o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2020-01-09 10:31:52 o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-01-09 10:31:52 o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2020-01-09 10:31:52 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+2020-01-09 10:31:52 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+2020-01-09 10:31:52 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2020-01-09 10:31:52 o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2020-01-09 10:31:52 o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2020-01-09 10:31:52 o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=517566b,type=ConfigurationPropertiesRebinder]
+2020-01-09 10:31:52 o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
+2020-01-09 10:31:52 o.s.c.n.e.InstanceInfoFactory - Setting initial instance status as: STARTING
+2020-01-09 10:31:52 c.n.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2020-01-09 10:31:52 c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2020-01-09 10:31:52 c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2020-01-09 10:31:52 c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2020-01-09 10:31:52 c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2020-01-09 10:31:52 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - Disable delta property : false
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - Single vip registry refresh property : null
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - Force full registry fetch : false
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - Application is null : false
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - Registered Applications size is zero : true
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - Application version is -1: true
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - The response status is 200
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2020-01-09 10:31:53 c.n.d.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1578537113372 with initial instances count: 0
+2020-01-09 10:31:53 o.s.c.n.e.s.EurekaServiceRegistry - Registering application mongodbServer with eureka with status UP
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1578537113377, current=UP, previous=STARTING]
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - DiscoveryClient_MONGODBSERVER/localhost:mongodbServer:8001: registering service...
+2020-01-09 10:31:53 o.a.c.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+2020-01-09 10:31:53 o.a.t.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2020-01-09 10:31:53 o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2020-01-09 10:31:53 o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8001
+2020-01-09 10:31:53 c.e.d.MongodbServerApplication - Started MongodbServerApplication in 15.962 seconds (JVM running for 17.369)
+2020-01-09 10:31:53 c.n.discovery.DiscoveryClient - DiscoveryClient_MONGODBSERVER/localhost:mongodbServer:8001 - registration status: 204
+2020-01-09 10:31:53 o.a.c.c.C.[.[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-01-09 10:31:53 o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2020-01-09 10:31:53 o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2020-01-09 10:31:53 org.mongodb.driver.connection - Opened connection [connectionId{localValue:5}] to 10.213.32.84:50000
+2020-01-09 10:31:54 org.mongodb.driver.connection - Opened connection [connectionId{localValue:6}] to 10.213.32.84:50000
+2020-01-09 10:32:23 c.n.discovery.DiscoveryClient - Disable delta property : false
+2020-01-09 10:32:23 c.n.discovery.DiscoveryClient - Single vip registry refresh property : null
+2020-01-09 10:32:23 c.n.discovery.DiscoveryClient - Force full registry fetch : false
+2020-01-09 10:32:23 c.n.discovery.DiscoveryClient - Application is null : false
+2020-01-09 10:32:23 c.n.discovery.DiscoveryClient - Registered Applications size is zero : true
+2020-01-09 10:32:23 c.n.discovery.DiscoveryClient - Application version is -1: false
+2020-01-09 10:32:23 c.n.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2020-01-09 10:32:23 c.n.discovery.DiscoveryClient - The response status is 200
+2020-01-09 10:36:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 10:39:50 c.e.d.s.MongoServerImpl - 入参：JSONArray;[{"val":"2012102200001925","op":"=","flag":"false","endValue":"null","startValue":"null","type":"null","key":"CUSTID"}],Pager:{"flag":0,"extInt":0,"count":false,"pageSize":10,"sum":false,"extBoolean":false,"pageNum":1,"sortFlag":0,"upHasData":false,"nexHasData":false,"returnJson":false},tableNameCUST_INFO
+2020-01-09 10:41:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 10:46:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 10:48:22 c.e.d.s.MongoServerImpl - 入参：JSONArray;[{"val":"2012102200001925","op":"=","flag":"false","endValue":"null","startValue":"null","type":"null","key":"CUSTID"}],Pager:{"flag":0,"extInt":0,"count":false,"pageSize":10,"sum":false,"extBoolean":false,"pageNum":1,"sortFlag":0,"upHasData":false,"nexHasData":false,"returnJson":false},tableNameCUST_INFO
+2020-01-09 10:51:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 10:56:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 11:01:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 11:06:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 11:11:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 11:16:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 11:21:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 11:26:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-01-09 11:31:53 c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.mysqlservers.dao.OrderdetailDao">
+
+	<!-- 结果Map -->
+	<resultMap id="BaseResultMap" type="com.example.mysqlservers.model.Orderdetail">
+		<result property="orderid" jdbcType="VARCHAR" column="orderid"/>
+		<result property="commodityName" jdbcType="VARCHAR" column="commodityName"/>
+		<result property="price" jdbcType="VARCHAR" column="price"/>
+		<result property="orderTime" jdbcType="TIMESTAMP" column="orderTime"/>
+		<result property="customer" jdbcType="VARCHAR" column="customer"/>
+	</resultMap>
+
+	<!-- 查询列 -->
+	<sql id="BaseColumnList">
+		orderid,commodityName,price,orderTime,customer
+	</sql>
+
+	<!--创建记录 -->
+	<insert id="create" parameterType="com.example.mysqlservers.model.Orderdetail">
+		INSERT INTO orderdetail
+		<trim prefix="(" suffix=")" suffixOverrides="," >
+			<if test="orderid!=null and orderid!=''">orderid,</if>
+			<if test="commodityName!=null and commodityName!=''">commodityName,</if>
+			<if test="price!=null and price!=''">price,</if>
+			<if test="orderTime!=null">orderTime,</if>
+			<if test="customer!=null and customer!=''">customer</if>
+		</trim>
+		<trim prefix="VALUES (" suffix=")" suffixOverrides="," >
+			<if test="orderid!=null and orderid!=''">#{orderid,jdbcType=VARCHAR},</if>
+			<if test="commodityName!=null and commodityName!=''">#{commodityName,jdbcType=VARCHAR},</if>
+			<if test="price!=null and price!=''">#{price,jdbcType=VARCHAR},</if>
+			<if test="orderTime!=null">#{orderTime,jdbcType=TIMESTAMP},</if>
+			<if test="customer!=null and customer!=''">#{customer,jdbcType=VARCHAR}</if>
+		</trim>
+	</insert>
+
+	<!-- 更新记录 -->
+	<update id="updateByPk" parameterType="com.example.mysqlservers.model.Orderdetail">
+		UPDATE orderdetail
+		<set>
+			<trim suffixOverrides=",">
+				<if test="commodityName!=null and commodityName!=''">commodityName = #{commodityName,jdbcType=VARCHAR},</if>
+				<if test="price!=null and price!=''">price = #{price,jdbcType=VARCHAR},</if>
+				<if test="orderTime!=null">orderTime = #{orderTime,jdbcType=TIMESTAMP},</if>
+				<if test="customer!=null and customer!=''">customer = #{customer,jdbcType=VARCHAR}</if>
+			</trim>
+		</set>
+		<where>
+			orderid = #{orderid,jdbcType=VARCHAR}
+		</where>
+	</update>
+
+	<!-- 根据主键查询记录 -->
+	<select id="queryByPk" parameterType="java.lang.String" resultMap="BaseResultMap">
+		SELECT <include refid="BaseColumnList" />
+		FROM orderdetail
+		<where>
+			orderid = #{orderid,jdbcType=VARCHAR}
+		</where>
+	</select>
+
+
+	<!-- 根据主键查询记录 -->
+	<select id="all"  resultMap="BaseResultMap">
+		SELECT <include refid="BaseColumnList" />
+		FROM orderdetail where 1=1
+	</select>
+
+	<!-- 根据主键删除记录 -->
+	<delete id="deleteByPk" parameterType="java.lang.String">
+		DELETE FROM orderdetail
+		<where>
+			orderid = #{orderid,jdbcType=VARCHAR}
+		</where>
+	</delete>
+
+	<!-- 按对象查询 -->
+	<select id="queryByOrderdetail" parameterType="com.example.mysqlservers.model.Orderdetail" resultMap="BaseResultMap">
+		SELECT <include refid="BaseColumnList" />
+		FROM orderdetail
+		<where>
+			1=1
+			<if test="orderid!=null and orderid!=''">AND orderid = #{orderid,jdbcType=VARCHAR}</if>
+			<if test="commodityName!=null and commodityName!=''">AND commodityName = #{commodityName,jdbcType=VARCHAR}</if>
+			<if test="price!=null and price!=''">AND price = #{price,jdbcType=VARCHAR}</if>
+			<if test="orderTime!=null">AND orderTime = #{orderTime,jdbcType=TIMESTAMP}</if>
+			<if test="customer!=null and customer!=''">AND customer = #{customer,jdbcType=VARCHAR}</if>
+		</where>
+	</select>
+
+	<sql id="pageHead">
+	   SELECT * FROM (
+	       SELECT ROWNUM AS RN, TM.* FROM (
+	   
+	</sql>
+	<sql id="pageTail">
+		) TM ) TMP
+		<where>
+			TMP.RN &gt; (${pageNum}-1)*${pageSize}
+			AND TMP.RN &lt;= ${pageNum}*${pageSize}
+		</where>
+	</sql>
+	<sql id="pageBody">
+		SELECT <include refid="BaseColumnList"/>
+		FROM orderdetail
+		<where>
+			<if test="orderid!=null and orderid!=''">AND orderid = #{orderid,jdbcType=VARCHAR}</if>
+			<if test="commodityName!=null and commodityName!=''">AND commodityName = #{commodityName,jdbcType=VARCHAR}</if>
+			<if test="price!=null and price!=''">AND price = #{price,jdbcType=VARCHAR}</if>
+			<if test="orderTime!=null">AND orderTime = #{orderTime,jdbcType=TIMESTAMP}</if>
+			<if test="customer!=null and customer!=''">AND customer = #{customer,jdbcType=VARCHAR}</if>
+		</where>
+	</sql>
+
+	<!-- 根据条件分页 -->
+	<select id="queryByPage" parameterType="java.util.Map" resultMap="BaseResultMap">
+		<include refid="pageHead"/>
+		<include refid="pageBody"/>
+		<include refid="pageTail"/>
+	</select>
+
+	<!-- 根据条件查询总数 -->
+	<select id="countByCondtion" parameterType="java.util.Map" resultType="long">
+		SELECT COUNT(*) FROM orderdetail
+		<where>
+			1=1
+			<if test="orderid!=null and orderid!=''">AND orderid = #{orderid,jdbcType=VARCHAR}</if>
+			<if test="commodityName!=null and commodityName!=''">AND commodityName = #{commodityName,jdbcType=VARCHAR}</if>
+			<if test="price!=null and price!=''">AND price = #{price,jdbcType=VARCHAR}</if>
+			<if test="orderTime!=null">AND orderTime = #{orderTime,jdbcType=TIMESTAMP}</if>
+			<if test="customer!=null and customer!=''">AND customer = #{customer,jdbcType=VARCHAR}</if>
+		</where>
+	</select>
+</mapper>
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!--定义日志保存的路径-->
+    <property name="LOG_HOME" value="./logs/riskBasicInterfaceLogs/" />
+
+    <!--定义一个控制台输出器，名为console-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!--按pattern指定的格式输出日志，编码为UTF-8-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss:SSS} %-5level [%thread]  %logger{30} - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <!--定义一个日滚动（每天生成一份）的日志文件-->
+    <appender name="errorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--按pattern指定的格式输出日志，编码为UTF-8-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %logger{30} - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <!-- 定义保存的文件名 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--%d{yyyy-MM-dd}代表每天生成一个新的日志-->
+            <fileNamePattern>${LOG_HOME}/Error/merchantErrorLog%d{yyyyMMdd}.log</fileNamePattern>
+            <!--日志最多保存60天，也就是60份-->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <!--保存的日志级别信息-->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!--定义一个日滚动（每天生成一份）的日志文件-->
+    <appender name="infoFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %logger{30} - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/Info/merchantInfoLog%d{yyyyMMdd}.log</fileNamePattern>
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+    <!--定义一个日滚动（每天生成一份）的日志文件-->
+    <appender name="warnFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %logger{30} - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/Warn/merchantWarnLog%d{yyyyMMdd}.log</fileNamePattern>
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+    <!-- 日志级别排序为： TRACE < DEBUG < INFO < WARN < ERROR -->
+    <!-- 定义日志全局最低输出级别是INFO，同时向控制台和日滚动文件输出 -->
+    <root level="DEBUG">
+        <appender-ref ref="console" />
+        <appender-ref ref="errorFile" />
+        <appender-ref ref="infoFile" />
+        <appender-ref ref="warnFile" />
+    </root>
+</configuration>
